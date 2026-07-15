@@ -6,7 +6,7 @@ using namespace std;
 int calculateTotal(const int scores[], int size)
 {
 
-    if (scores == nullptr || size <= 0)
+    if (scores == nullptr || size <= 0)   // Could use is valid size function declared later, can use || !isValidSize(size) instead so it doesnt need to recheck it over and over
     {
         return 0;
     }
@@ -106,6 +106,7 @@ void sortScores(int scores[], int size)
                 temp = scores[a];
                 scores[a] = scores[a + 1];
                 scores[a + 1] = temp; // I used a bubble sort because that is what I learned, to me it is easier this way.
+                // Its fine with a bubble sort, but the lab is better with a selection sort, there was an example on the quiz section that you can rewrite to make it work in this lab.
             }
         }
     }

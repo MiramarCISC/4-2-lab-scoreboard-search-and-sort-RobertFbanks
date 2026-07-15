@@ -7,7 +7,7 @@ int calculateTotal(const int scores[], int size)
 {
 
     if (scores == nullptr || size <= 0)   // Could use is valid size function declared later, can use || !isValidSize(size) instead so it doesnt need to recheck it over and over
-    {
+    { // Why the extra line just for the brace?
         return 0;
     }
     else

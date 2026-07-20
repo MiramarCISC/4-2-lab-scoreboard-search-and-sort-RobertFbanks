@@ -30,7 +30,8 @@ double calculateAverage(const int scores[], int size) {
         return 0.0;
     }
     else {
-        return calculateTotal(scores, size) / size;
+        double total = calculateTotal(scores, size);
+        return total / size;
     }
 }
 
@@ -93,7 +94,11 @@ void sortScores(int scores[], int size) {
    
     // Sort the array from lowest to highest.
     // A selection sort works well for this lab.
-     
+    
+    if (scores == nullptr || !isValidSize(size)) {
+        return;
+    }
+
     for (int start = 0; start < size - 1; start++) {
         int minIndex = start;
 
